@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="container md-4">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>NOMBRES</th>
+					<th>TELEFONOS</th>
+					<th>ACCIONES</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="persona:${personas}">
+
+					<td th:text="${persona.id}"></td>
+					<td th:text="${persona.nombre}"></td>
+					<td th:text="${persona.telefono}"></td>
+					<td>
+					<a class="btn btn-warning" >Editar</a>
+					<a class="btn btn-danger">Eliminar</a>
+					</td>
+				<tr>
+			</tbody>
+
+
+		</table>
+
+
+	</div>
+
+</body>
+</html>
